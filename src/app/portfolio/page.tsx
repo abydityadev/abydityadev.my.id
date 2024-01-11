@@ -19,7 +19,7 @@ type Repository = {
 };
 
 export default function page() {
-    const [repo, setRepo] = useState<Repository[]>([]);
+    const [Repo, setRepo] = useState<Repository[]>([]);
 
     useEffect(() => {
         fetch(
@@ -38,7 +38,7 @@ export default function page() {
                 <Title Title={'Projects'} Description={'Things i′ve done on Github 💡'} />
                 <Divider />
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-5'>
-                    {repo.map((r) => {
+                    {Repo.map((r) => {
                         return (
                             <motion.div key={r.id} whileHover={{ scale: 1.03 }} className='border-dashed border-2 border-neutral-500 dark:border-neutral-700 rounded-xl p-5 relative'>
                                 <h1 className='font-bold text-3xl'>{r.name}</h1>
