@@ -14,7 +14,7 @@ export default function page() {
                     <div className='col-span-1'>
                         <Title Title={'Gears'} Description={'Software, Setup etc.'} />
                     </div>
-                    <p className='text-2xl text-neutral-400 dark:text-neutral-500'>
+                    <p className='text-2xl text-neutral-500'>
                         Check out the list of hardware and software that I currently use professionally and personally.
                     </p>
                 </div>
