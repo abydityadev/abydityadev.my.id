@@ -12,7 +12,7 @@ var Post = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: "string",
-      resolve: (post) => `/thread/${post._raw.flattenedPath}`
+      resolve: (post) => `/blog/${post._raw.flattenedPath}`
     },
     readTimeMinutes: {
       type: "number",
@@ -40,4 +40,4 @@ export {
   calculateReadingTime,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-ZBMOOA7S.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-EZKJLAVG.mjs.map

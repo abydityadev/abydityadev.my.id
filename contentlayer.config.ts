@@ -13,7 +13,7 @@ export const Post = defineDocumentType(() => ({
     computedFields: {
         url: {
             type: "string",
-            resolve: (post) => `/thread/${post._raw.flattenedPath}`,
+            resolve: (post) => `/blog/${post._raw.flattenedPath}`,
         },
         readTimeMinutes: {
             type: 'number',

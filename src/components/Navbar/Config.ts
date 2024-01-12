@@ -12,7 +12,7 @@ export const Config = [
         path: '/portfolio'
     },
     {
-        label: 'Thread',
-        path: '/thread'
+        label: 'Blog',
+        path: '/blog'
     },
 ]
