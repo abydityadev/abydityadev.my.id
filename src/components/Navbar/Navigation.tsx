@@ -27,7 +27,7 @@ export function Navigation() {
         <nav className='sticky top-0 border-b border-b-neutral-700 bg-light dark:bg-dark duration-300 z-50'>
             <div className='max-w-3xl mx-auto flex justify-between items-center py-5 px-3 xl:px-0'>
                 {/* Navbar name */}
-                <h1 className='text-2xl font-bold'>abyditya.</h1>
+                <Link href={'/'} className='text-2xl font-bold'>abyditya.</Link>
 
                 {/* Navbar paths */}
                 <ul className='hidden sm:flex gap-5'>
