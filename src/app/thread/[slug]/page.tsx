@@ -24,18 +24,19 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
             <section className='max-w-3xl mx-auto px-3 xl:px-0'>
                 <section className="my-16">
                     <header>
-                        <div className="flex gap-3 items-center text-xs text-neutral-600 dark:text-neutral-400">
-                            <span>Thread</span>
-                            /
+                        <div className="flex gap-3 items-center text-xs text-neutral-600 dark:text-neutral-400 uppercase font-semibold">
+                            <span className="text-indigo-500">{post.tags}</span>
+                            •
                             <time dateTime={post.date}>
-                                {new Intl.DateTimeFormat("en-US", { dateStyle: "long" }).format(new Date(post.date))}
+                                {new Intl.DateTimeFormat("en-US", { dateStyle: "medium" }).format(new Date(post.date))}
                             </time>
+                            •
+                            <span>{post.readTimeMinutes} min read</span>
                         </div>
-                        <h1 className="text-6xl font-black my-2">{post.title}</h1>
-                        <p>{post.readTimeMinutes} min read <span className="text-neutral-500">@</span> <span className="text-indigo-500">{post.tags}</span></p>
+                        <h1 className="text-5xl sm:text-6xl font-black my-5">{post.title}</h1>
                     </header>
                     <Divider />
-                    <article className="prose dark:prose-invert xl:text-xl">
+                    <article className="prose dark:prose-invert xl:text-xl prose-p:text-gray-400">
                         <MDXContent components={mdxComponents} />
                     </article>
                 </section>

@@ -7,10 +7,7 @@ var Post = defineDocumentType(() => ({
   fields: {
     title: { type: "string", required: true },
     date: { type: "date", required: true },
-    tags: {
-      type: "list",
-      of: { type: "string" }
-    }
+    tags: { type: "string", required: true }
   },
   computedFields: {
     url: {
@@ -43,4 +40,4 @@ export {
   calculateReadingTime,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-UCBEFKS6.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-ZBMOOA7S.mjs.map
