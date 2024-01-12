@@ -16,7 +16,7 @@ export default function page() {
   return (
     <Canvas>
       <section className="my-10">
-        <p className='text-xs flex justify-end font-mono text-neutral-500'>BKS, IDN · 6.2383° S, 106.9756° E</p>
+        <p className='text-xs flex justify-end text-neutral-500'>BKS, IDN · 6.2383° S, 106.9756° E</p>
         <h1 className='text-4xl sm:text-8xl font-black text-justify'>ABYAN RADITYA THE DEVELOPER</h1>
         <p className='my-5 max-w-lg text-neutral-600 dark:text-neutral-400 pb-4'>
           I′m a 14 year old web developer from Indonesia 🇮🇩.
