@@ -41,7 +41,7 @@ export default function Data() {
                     <div className='grid grid-cols-1 sm:grid-cols-2 gap-5'>
                         {data.map((r) => {
                             return (
-                                <motion.div key={r.id} whileHover={{ scale: 1.03 }} className='border-dashed border-2 border-neutral-500 dark:border-neutral-700 rounded-xl p-5 relative'>
+                                <motion.a href={r.html_url} target='_blank' key={r.id} whileHover={{ scale: 1.03 }} className='border-dashed border-2 border-neutral-500 dark:border-neutral-700 rounded-xl p-5 relative'>
                                     <h1 className='font-bold text-3xl'>{r.name}</h1>
                                     <p className='text-neutral-600 dark:text-neutral-400'>
                                         {r.description}
@@ -49,7 +49,7 @@ export default function Data() {
                                     <div className='absolute -bottom-3 bg-indigo-500 px-3 rounded font-semibold text-light'>
                                         ⭐ {r.stargazers_count}
                                     </div>
-                                </motion.div>
+                                </motion.a>
                             )
                         })}
                     </div>
