@@ -65,7 +65,7 @@ export default function page() {
         <div className='grid grid-cols-1 py-10'>
           {posts.map((post, idx) => {
             return (
-              <Link key={idx} href={'/'} className='flex justify-between py-3'>
+              <Link key={idx} href={post.url} className='flex justify-between py-3'>
                 <span>
                   <h1 className='text-xl font-medium'>{post.title}!</h1>
                   <p className='base font-medium text-neutral-500'>
