@@ -3,13 +3,16 @@
 import Canvas from '@/components/Canvas'
 import Link from 'next/link'
 import React from 'react'
-import { motion } from 'framer-motion'
-import { ExternalLink, Mail } from 'lucide-react'
+import { ExternalLink } from 'lucide-react'
 import Divider from '@/components/Divider'
-import Image from 'next/image'
 import Title from '@/components/Title'
+import { allPosts } from "contentlayer/generated";
 
 export default function page() {
+  const posts = allPosts.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
     <Canvas>
       <section className="my-10">
@@ -60,22 +63,21 @@ export default function page() {
           </Link>
         </div>
         <div className='grid grid-cols-1 py-10'>
-          <Link href={'/'} className='flex justify-between py-3'>
-            <span>
-              <h1 className='text-xl font-medium'>Hidup ini terlalu banyak kamu!</h1>
-              <p className='base font-medium text-neutral-500'>December 17, 2023</p>
-            </span>
-            <p className='text-neutral-500 hidden sm:block'>1 min read</p>
-          </Link>
-          <Link href={'/'} className='flex justify-between py-3'>
-            <span>
-              <h1 className='text-xl font-medium'>Hidup ini terlalu banyak kamu!</h1>
-              <p className='base font-medium text-neutral-500'>December 17, 2023</p>
-            </span>
-            <p className='text-neutral-500 hidden sm:block'>1 min read</p>
-          </Link>
+          {posts.map((post, idx) => {
+            return (
+              <Link href={'/'} className='flex justify-between py-3'>
+                <span>
+                  <h1 className='text-xl font-medium'>{post.title}!</h1>
+                  <p className='base font-medium text-neutral-500'>
+                    {new Intl.DateTimeFormat("en-US", { dateStyle: 'long' }).format(new Date(post.date))}
+                  </p>
+                </span>
+                <p className='text-neutral-500 hidden sm:block'>{post.readTimeMinutes} min reads</p>
+              </Link>
+            )
+          })}
         </div>
-        <p className='text-center text-sm text-neutral-500'>Showing 2 out of <span className='text-amber-700'>3 posts</span></p>
+        <p className='text-center text-sm text-neutral-500'>Showing 2 out of <span className='text-amber-700'>{posts.length} posts</span></p>
       </section>
     </Canvas>
   )
