@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import '@/styles/globals.css'
 import '@/styles/utilities.css'
 import Provider from './provider'
+import { Analytics } from '@vercel/analytics/react'
 
 export const metadata: Metadata = {
   title: 'Create Next App',

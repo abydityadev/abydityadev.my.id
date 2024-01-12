@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.10",
+    "@vercel/analytics": "^1.1.1",
     "axios": "^1.6.5",
     "contentlayer": "^0.3.4",
     "framer-motion": "^10.16.16",
