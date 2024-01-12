@@ -28,6 +28,7 @@ export default function RootLayout({
       <body className={"bg-light dark:bg-dark text-dark dark:text-light font-base duration-300"}>
         <Provider>
           {children}
+          <Analytics />
         </Provider>
       </body>
     </html>
