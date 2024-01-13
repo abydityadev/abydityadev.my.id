@@ -25,7 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={"bg-light dark:bg-dark text-dark dark:text-light font-base duration-300"}>
+      <body className={"bg-light dark:bg-dark text-dark dark:text-light font-base duration-300 scroll-smooth"}>
         <Provider>
           {children}
           <Analytics />

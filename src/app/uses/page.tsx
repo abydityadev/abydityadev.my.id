@@ -12,7 +12,7 @@ export default function page() {
             <section className="my-10 mt-14">
                 <div className='sm:grid grid-flow-col grid-cols-2'>
                     <div className='col-span-1'>
-                        <Title Title={'Gears'} Description={'Software, Setup etc.'} />
+                        <Title Title={'Uses'} Description={'Software, Setup etc.'} />
                     </div>
                     <p className='text-2xl text-neutral-500'>
                         Check out the list of hardware and software that I currently use professionally and personally.

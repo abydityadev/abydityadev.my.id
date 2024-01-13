@@ -13,7 +13,7 @@ export default function page() {
     return (
         <Canvas>
             <section className="my-16">
-                <Title Title={'Threads ' + `(${posts.length})`} Description={'Programming, Life etc'} />
+                <Title Title={'Blogs ' + `(${posts.length})`} Description={'Programming, Life etc'} />
                 <Divider />
                 <div className='grid grid-cols-1'>
                     {posts.map((post, idx) => {

@@ -7,6 +7,7 @@ import { ExternalLink } from 'lucide-react'
 import Divider from '@/components/Divider'
 import Title from '@/components/Title'
 import { allPosts } from "contentlayer/generated";
+import { Form } from './contact/components/Form'
 
 export default function page() {
   const posts = allPosts.sort(
@@ -26,7 +27,7 @@ export default function page() {
         </p>
         <div className='flex gap-5 items-center'>
           <Link className='px-6 py-2 border border-neutral-950 hover:text-light dark:border-neutral-500 hover:bg-neutral-950 dark:hover:bg-neutral-50 dark:hover:text-dark duration-300' href={'/'}>Blog</Link>
-          <Link className='flex gap-2 items-center hover:underline' href={'/Contact'}>
+          <Link className='flex gap-2 items-center hover:underline' href={'#ontact'}>
             Contact <ExternalLink size={15} />
           </Link>
         </div>
@@ -67,7 +68,7 @@ export default function page() {
             return (
               <Link key={idx} href={post.url} className='flex justify-between py-3'>
                 <span>
-                  <h1 className='text-xl font-medium'>{post.title}!</h1>
+                  <h1 className='text-xl font-medium'>{post.title}</h1>
                   <p className='base font-medium text-neutral-500'>
                     {new Intl.DateTimeFormat("en-US", { dateStyle: 'long' }).format(new Date(post.date))}
                   </p>
