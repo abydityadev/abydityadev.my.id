@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   keywords: ['abyditya', 'abydityadev', 'abyan raditya'],
   metadataBase: new URL('https://acme.com'),
   openGraph: {
-    siteName: 'abydityadev.my.id',
+    siteName: 'abyditya.my.id',
     title: 'Abyan Raditya',
     description: '💫 An online portfolio and blog by Abyan. Showcase of my projects, and some of my thoughts about website development.',
   }
