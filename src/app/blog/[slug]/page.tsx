@@ -36,7 +36,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
                         <h1 className="text-5xl sm:text-6xl font-black my-5">{post.title}</h1>
                     </header>
                     <Divider />
-                    <article className="prose dark:prose-invert xl:text-xl prose-p:text-gray-400">
+                    <article className="prose dark:prose-invert xl:text-xl dark:prose-p:text-gray-400 prose-p:text-gray-600">
                         <MDXContent components={mdxComponents} />
                     </article>
                 </section>
